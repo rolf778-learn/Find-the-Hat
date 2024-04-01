@@ -6,7 +6,9 @@ if user tries to move it beyond boundaries...
 
 keep moving right by the input 'r' 
 ![image](https://github.com/rolf778-learn/Find-the-Hat/assets/161300283/8382073e-a1dd-4b11-a660-11a6b2dea6b1)
- 
+
+Once * reaches ^, user wins.
 ![image](https://github.com/rolf778-learn/Find-the-Hat/assets/161300283/7844592e-ffa6-49a5-b44b-899b42bf75c7)
 
+If * reaches O, user loses.
 ![image](https://github.com/rolf778-learn/Find-the-Hat/assets/161300283/9834ca41-4429-44f9-aeee-3fbb9a6bf884)
