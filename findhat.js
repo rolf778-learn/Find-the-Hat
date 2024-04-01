@@ -17,8 +17,10 @@ class Field {
       .fill(null)
       .map(() => new Array(width).fill("░"));
 
+     //create starting point
     field[this.playerPosition.y][this.playerPosition.x] = "*";
 
+     //create hat
     let hatplaced = false;
     while (!hatplaced) {
       let hatPosition = {
@@ -31,6 +33,7 @@ class Field {
       }
     }
 
+     //create holes
     for (let i = 0; i < (width * height) / 5; i++) {
       let holeplaced = false;
       while (!holeplaced) {
@@ -51,6 +54,8 @@ class Field {
 
     return field;
   }
+
+  //print out field
   print() {
     process.stdout.write("\x1B[2J\x1B[0f");
     console.log(this.message);
@@ -60,6 +65,7 @@ class Field {
     console.log("...............");
   }
 
+ //move the star
   move(direction) {
     let oldY = this.playerPosition.y;
     let oldX = this.playerPosition.x;
@@ -113,8 +119,10 @@ class Field {
     }
   }
 }
+//create a field using Field Class
 const myField = new Field(6, 7);
 
+//the game
 function theGame(field) {
   while (!field.isGameOver) {
     field.print();
@@ -127,4 +135,5 @@ function theGame(field) {
     console.log('Game is over!');
   }
 }
+
 theGame(myField);
